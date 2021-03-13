@@ -12,6 +12,7 @@ func main() {
     mux.HandleFunc("/", clientResponse)
 
     err := http.ListenAndServe(":8000", mux)
+    fmt.Println("starting server...")
     log.Fatal(err)
 }
 
