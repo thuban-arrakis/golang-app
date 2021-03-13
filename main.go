@@ -18,10 +18,10 @@ func main() {
 
 func clientResponse(w http.ResponseWriter, r *http.Request) {
 
-	b, err := ioutil.ReadAll(r.Body)
+    b, err := ioutil.ReadAll(r.Body)
     if err != nil {
-		return
-	}
+        return
+    }
 
-	fmt.Fprintf(w, "Method: %s, Body: %s", r.Method, b)
+    fmt.Fprintf(w, "Method: %s, Body: %s", r.Method, b)
 }
